@@ -3,11 +3,9 @@ clear;
 [num,txt,raw] = xlsread('2018-05-02_utanettor.xlsx');
 
 
-for i=1:1:raw.size()
-    
-    
-end
+for(i=1:1:raw){
+    tid = raw(:,1)
 
-    
+    }
     
 
