@@ -43,6 +43,9 @@ for i=1:1:length(rsscell)
     
 end
 
+T = cell2table(rsscell);
+
+writetable(T,'MA_long.txt', 'Delimiter', '\t')
 
 
   
