@@ -26,28 +26,25 @@ gps(:,5:8) =[];
 rsscell(all(cellfun('isempty',rsscell),2),:)=[];
 gps(all(cellfun('isempty',gps),2),:)=[];
 
-gpstider = cell2mat(gps(:,1));
-rsscelltider = cell2mat(rsscell(:,1));
 
 for i=1:1:length(rsscell)
-   dummy = 10000000;
-    for j=1:1:length(gps)       
-          if (abs(rsscelltider(i,1) - gpstider(j,1)) < dummy)
-             dummy = abs(rsscelltider(i,1) - gpstider(j,1));
-             rsscell(i,4) = gps(j,3);
-             rsscell(i,5) = gps(j,4);
-           
-          end
-    end
+   
+   rsscell(i,1)
+   rsscell(i,4) = min(abs(rsscell(i,1) - gps(,1)));
     
     
 end
 
 
 
-  
 
-
- 
+%%
+ for j=1:1:length(gps)
+        dummy = 1000;
+          if (abs(rsscell(i,1)-gps(i,1)) < dummy)
+             dummy = abs(rsscell(i,1)-gps(i,1));
+             rsscell(i,4) = gps(j,3);
+          end
+ end
 
 
