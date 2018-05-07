@@ -1,6 +1,6 @@
 %% läs in xcelfilen
 clear;
-[num,txt,raw] = xlsread('2018-05-02_utanettor.xlsx');
+[num,txt,raw] = xlsread('2018-05-06_utanettor2.xlsx');
 
 sumRSSCELL = sum(strcmp(raw(:,2),'RSSCELL'));
 sumGPS = sum(strcmp(raw(:,2),'GPS'));
@@ -45,7 +45,7 @@ end
 
 T = cell2table(rsscell);
 
-writetable(T,'MA_long.txt', 'Delimiter', '\t')
+writetable(T,'MA_long3.txt', 'Delimiter', '\t')
 
 
   
